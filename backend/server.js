@@ -1,5 +1,5 @@
 const express = require('express')
-const routes = require('./routes/workouts.routes')
+const { workoutRoutes } = require('./routes/workouts.routes')
 
 const app = express()
 const port = process.env.PORT || 3000
@@ -9,11 +9,7 @@ app.use((req, res, next) => {
   next()
 })
 
-app.use(routes)
-
-app.get('/', (req, res) => {
-  res.json({ msg: 'Welcome to the app' })
-})
+app.use('/api/workouts', workoutRoutes)
 
 app.listen(port, () => {
   console.log(
