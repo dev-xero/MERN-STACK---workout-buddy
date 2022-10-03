@@ -7,7 +7,7 @@ app.get('/', (req, res) => {
   res.json({ msg: 'Welcome to the app' });
 });
 
-app.listen(PORT, () => {
+app.listen(port, () => {
   console.log(
     `Listening for requests at port ${port}, site live on: http://localhost:${port}`
   );
