@@ -4,6 +4,8 @@ const { workoutRoutes } = require('./routes/workouts.routes')
 const app = express()
 const port = process.env.PORT || 3000
 
+app.use(express.json())
+
 app.use((req, res, next) => {
   console.log(`Request made to the server: ${req.path} ${req.method}`)
   next()
