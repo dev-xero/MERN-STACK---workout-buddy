@@ -1,4 +1,4 @@
-const { ReactRouter, Routes, Route } = 'ReactRouter'
+const { BrowserRouter, Routes, Route } = 'react-router-dom'
 
 const App = () => (
   <div className="App">
