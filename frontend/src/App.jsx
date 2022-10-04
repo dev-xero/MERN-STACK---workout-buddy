@@ -1,8 +1,17 @@
-const { BrowserRouter, Routes, Route } = 'react-router-dom'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import NavBar from './components/NavBar'
+import Home from './pages/Home'
 
 const App = () => (
   <div className="App">
-    <h1>Workout Buddy</h1>
+    <BrowserRouter>
+      <NavBar></NavBar>
+      <div className="pages">
+        <Routes>
+          <Route path="/" element={<Home />} />
+        </Routes>
+      </div>
+    </BrowserRouter>
   </div>
 )
 
