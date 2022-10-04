@@ -3,6 +3,7 @@ const {
   workout_all_get,
   workout_single_get,
   workout_create_post,
+  workout_delete_single,
 } = require('../controllers/workout.controllers')
 
 const routes = express.Router()
@@ -15,8 +16,6 @@ routes.patch('/:id', (req, res) =>
   res.json({ workout: `Updating workout details for ${req.params.id}` })
 )
 
-routes.delete('/:id', (req, res) =>
-  res.json({ workout: `Deleting the workout at ${req.params.id}` })
-)
+routes.delete('/:id', workout_delete_single)
 
 module.exports = { workoutRoutes: routes }
