@@ -9,7 +9,7 @@ export default function Home() {
 			const response = await fetch('/api/workouts')
 			console.log(response)
       const json = await response.json()
-      if (res.ok) {
+      if (response.ok) {
         setWorkouts(json)
       }
     }
